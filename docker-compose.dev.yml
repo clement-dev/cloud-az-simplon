@@ -9,8 +9,8 @@ services:
     image: "simplon/api:0.0.1"
     environment:
       HOME: /app
-  #  volumes:
-  #  - ./data/api:/app
+    volumes:
+    - ./api:/app
     restart: unless-stopped
     ports:
       - "0.0.0.0:3333:3333"
