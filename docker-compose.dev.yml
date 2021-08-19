@@ -1,23 +1,21 @@
 version: "3"
 
 services:
-  backend:
-    container_name: api
-    build:
-      context: api
-      dockerfile: ./.docker/Dockerfile.dev
-    image: "simplon/api:0.0.1"
-    environment:
-      HOME: /app
-    volumes:
-    - ./api:/app
-    restart: unless-stopped
-    ports:
-      - "0.0.0.0:3333:3333"
-    networks:
-      - simplon-net
-    depends_on:
-      - postgres
+#  backend:
+#    container_name: api
+#    build:
+#      context: api
+#      dockerfile: ./.docker/Dockerfile.dev
+#    image: "simplon/api:0.0.1"
+#    volumes:
+#    - ./api:/app
+#    restart: unless-stopped
+#    ports:
+#      - "0.0.0.0:3333:3333"
+#    depends_on:
+#      - postgres
+#    networks:
+#      - simplon-net
 
   postgres:
     container_name: postgres
